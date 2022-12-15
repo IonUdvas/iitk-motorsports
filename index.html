@@ -11,7 +11,12 @@
     <title>Team IITK Motorsports</title>
 </head>
 <body>
-    <main>
+  <div class="black-cover" id="black-cover">
+    <div class="motto" id="motto">
+      <div class="motto-text">D E S I G N </div><div class="motto-text"> B U I L D </div><div class="motto-text"> R A C E</div>
+    </div>
+  </div>
+    <main id="main" class="animateOnStartUpIn">
         <div class="logo"><img src="https://www.iitk.ac.in/ame/sae/assets/favicon.png" alt=""></div>
         <div class="social-bar">
           <div class="social-bar-wrapper"></div>
@@ -48,29 +53,22 @@
     <nav>
     <div id="nav-links">
     <a class="nav-link" href="#">
-      <h2 class="nav-link-label rubik-font">Home</h2>
-      <img class="nav-link-image" src="https://images.unsplash.com/photo-1666091863721-54331a5db52d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" />
+      <img class="nav-link-image" src="assets/nav-images/home-nav.jpg" />
+      <div class="nav-link-text oswald-text">HOME</div>
     </a>
     <a class="nav-link" href="#">
-      <h2 class="nav-link-label rubik-font">Work</h2>
-      <img class="nav-link-image" src="https://images.unsplash.com/photo-1666055642230-1595470b98fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=995&q=80" />
+      <img class="nav-link-image" src="assets/nav-images/car-nav.jpg" />
+      <div class="nav-link-text oswald-text">CARS</div>
     </a>
     <a class="nav-link" href="#">
-      <h2 class="nav-link-label rubik-font">About</h2>
-      <img class="nav-link-image" src="https://images.unsplash.com/photo-1666005487638-61f45819c975?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" />
+      <img class="nav-link-image" src="assets/nav-images/sponsor-nav.jpg" />
+      <div class="nav-link-text oswald-text">SPONSORS</div>
     </a>
-    <a class="nav-link" href="#">
-      <h2 class="nav-link-label rubik-font">Contact</h2>
-      <img class="nav-link-image" src="https://images.unsplash.com/photo-1665910407771-bc84ad45676b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80" />
-    </a>
-    <a class="nav-link" href="#">
-      <h2 class="nav-link-label rubik-font">Join Us</h2>
-      <img class="nav-link-image" src="https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" />
-    </a>
+
   </div>
 </nav>
 
-<button id="nav-toggle" type="button" onclick="toggleNav()">
+<button id="nav-toggle" type="button" onclick="toggleNav()" class="animateOnStartUpIn">
     <span>MENU</span>
     <i class="open fa-solid fa-bars-staggered"></i>
     <i class="close fa-solid fa-xmark"></i>

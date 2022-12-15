@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;600;700&display=swap');
 
+:root{
+  --black: #212529;
+  --red: #ff4d4d;
+}
+.oswald-text{
+  font-family: 'Oswald', 'sans-serif';
+}
+
 body {
     height: 100vh;
     width: 100vw;
@@ -7,118 +15,213 @@ body {
     background-color: black;
   }
   
-  .rubik-font {
-    font-family: "Rubik", sans-serif;
-  }
-  
-  main {
-    background-position: center 0%;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    z-index: 2;
-    transition: transform 500ms cubic-bezier(.13,.53,.38,.97);
-  }
-  
-  body[data-nav="true"] > main {
-    transform: translateY(-50%);
-  }
-  
-  nav {
-    height: 50vh;
-    width: 100%;
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-    z-index: 1;
-    overflow: hidden;
-  }
-  
-  #nav-links {  
-    display: flex;
-    gap: clamp(1rem, 2vw, 2rem);
-    margin-top: clamp(2rem, 2vw, 3rem);
-    padding: 0rem clamp(1rem, 2vw, 2rem);
-    transform: translateY(70%) scale(0.9);
-    transition: transform 500ms cubic-bezier(.13,.53,.38,.97); 
-  }
-  
-  body[data-nav="true"] > nav > #nav-links {
-    transform: translateY(0%) scale(1);
-  }
-  
-  #nav-links > .nav-link {
-    text-decoration: none;
-  }
-  
-  #nav-links > .nav-link > .nav-link-label {
-    color: white;
-    font-size: 1.25rem;
-    margin: 0rem;
-    text-transform: uppercase;
-  }
-  
-  #nav-links > .nav-link > .nav-link-image {
-    width: max(20vw, 400px);
-    aspect-ratio: 1.8 / 1;
-    border-radius: 0.5rem;
-    margin-top: 0.75rem;
-    object-fit: cover;
-  }
-  
-  #nav-toggle {
-    height: 5rem;
-    width: 5rem;
-    position: fixed;
-    z-index: 3;
-    left: 50%;
-    bottom: 3rem;
-    transform: translateX(-50%);
-    background-color: rgb(182, 142, 113);
-    border: none;
-    border-radius: 5rem;
-    outline: none;
-    box-shadow: 0rem 0rem 4rem rgba(0 0 0 / 35%);
-    cursor: pointer;
-    transition: transform, background-color;
-    transition-timing-function: ease;
-    transition-duration: 400ms;
-  }
-  
-  #nav-toggle:hover {
-    transform: translateX(-50%) scale(1.04);
-  }
-  
-  #nav-toggle:active {
-    transform: translateX(-50%) scale(0.96);
-  }
-  
-  body[data-nav="true"] > #nav-toggle {
-    background-color: rgb(85, 130, 149);
-  }
-  
-  body:not([data-nav="true"]) > #nav-toggle:hover > .open {
+.rubik-font {
+  font-family: "Oswald", sans-serif;
+}
+
+.black-cover{
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.black-cover > .motto{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  text-align: center;
+  font-family: 'Oswald', 'sans-serif';
+  height: auto;
+  position: relative;
+  color: white;
+  font-size: 3em;
+}
+
+.black-cover > .motto > .motto-text{
+  padding-left: 4vw;
+  padding-right: 4vw;
+  filter: blur(10px);
+  opacity: 1;
+  scale: 0.8;
+}
+
+.blur{
+  animation: blurIn 500ms cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 normal forwards;
+}
+
+@keyframes blurIn{
+  to{
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+    transform: scale(1.5);
+    filter: blur(0);
   }
-  
-  #nav-toggle > i {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
-    color: rgb(246, 231, 224);
-    font-size: 1.75rem;
+}
+
+main {
+  background-image: url(../assets/index-background.jpg);
+  background-position: center 0%;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  z-index: 3;
+  transition: transform 500ms cubic-bezier(.13,.53,.38,.97);
+  opacity: 0;
+}
+
+body[data-nav="true"] > main {
+  transform: translateY(-50%);
+}
+
+nav {
+  height: 50vh;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#nav-links {  
+  display: flex;
+  margin-top: clamp(2rem, 2vw, 3rem);
+  padding-left: 3rem;
+  padding-right: 3rem;
+  justify-content: space-around;
+  gap: 3rem;
+  transform: translateY(70%) scale(0.9);
+  transition: transform 500ms cubic-bezier(.13,.53,.38,.97); 
+}
+
+body[data-nav="true"] > nav > #nav-links {
+  transform: translateY(0%) scale(1);
+}
+
+#nav-links > .nav-link {
+  text-decoration: none;
+  position: relative;
+  aspect-ratio: 1 / 1;
+  height: 30vh;
+}
+
+#nav-links > .nav-link > .nav-link-image {
+  height: 30vh;
+  position: absolute;
+  aspect-ratio: 1 / 1;
+  border-radius: 0.5rem;
+  margin-top: 0.75rem;
+  object-fit: cover;
+  transition: filter 500ms ease-in-out;
+}
+
+#nav-links > .nav-link:hover > .nav-link-image{
+  filter: blur(2px);
+}
+
+#nav-links > .nav-link:hover > .nav-link-text{
+  transform: scale(1.3) translateY(10px);
+}
+
+#nav-links > .nav-link > .nav-link-text {
+  transition: transform 500ms ease-in-out;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: white;
+  text-shadow: var(--black) 1px 0 1px;
+  letter-spacing: 0.2em;
+  margin-right: -0.2em;
+  transform: translateY(10px);
+  font-weight: 300;
+}
+
+#nav-toggle {
+  opacity: 0%;
+  height: 5rem;
+  width: 5rem;
+  position: fixed;
+  z-index: 4;
+  left: 50%;
+  bottom: 3rem;
+  transform: translateX(-50%);
+  background-color: var(--red);
+  border: none;
+  border-radius: 5rem;
+  outline: none;
+  box-shadow: 0rem 0rem 4rem rgba(0 0 0 / 35%);
+  cursor: pointer;
+  transition: transform, background-color;
+  transition-timing-function: ease;
+  transition-duration: 400ms;
+}
+
+#nav-toggle:hover {
+  transform: translateX(-50%) scale(1.04);
+}
+
+#nav-toggle:active {
+  transform: translateX(-50%) scale(0.96);
+}
+
+body[data-nav="true"] > #nav-toggle {
+  background-color: var(--black);
+  color: var(--black);
+}
+
+body:not([data-nav="true"]) > #nav-toggle:hover > .open {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+body:not([data-nav="true"]) > #nav-toggle:hover > span {
+  color: var(--red);
+}
+
+#nav-toggle > i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  color: rgb(246, 231, 224);
+  font-size: 1.75rem;
+  opacity: 0;
+  transition: transform, opacity;
+  transition-timing-function: ease;
+  transition-duration: 400ms;
+}
+
+#nav-toggle > span {
+  opacity: 0;
+  font-size: 1.5em;
+  font-family: 'Oswald', 'sans-serif';
+  animation: fadeBlink 5000ms ease 0s infinite normal forwards;
+}
+
+@keyframes fadeBlink{
+  10%{
+    opacity: 1;
+  }
+  20%{
     opacity: 0;
-    transition: transform, opacity;
-    transition-timing-function: ease;
-    transition-duration: 400ms;
   }
-  
-  body[data-nav="true"] > #nav-toggle > .close {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  
- 
+}
+
+body[data-nav="true"] > #nav-toggle > .close {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+

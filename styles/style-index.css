@@ -6,17 +6,6 @@ body {
     margin: 0px;
     background-color: black;
 }
-  
-main {
-  background-image: url("../assets/index-background.jpg");
-  background-position: center 0%;
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-  z-index: 2;
-  transition: transform 500ms cubic-bezier(.13,.53,.38,.97);
-}
 
 main .logo img{
   position: absolute;
@@ -110,10 +99,10 @@ main .social-bar .social-bar-elements ul li a .social-icon:hover
   position: absolute;
   width: 35vw;
   height: 25vh;
-  left: 10vw;
+  left: 12vw;
   top: 38vh;
   background-color: #000;
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 .about-info-text{
@@ -124,7 +113,7 @@ main .social-bar .social-bar-elements ul li a .social-icon:hover
   align-content: center;
   width: 32vw;
   height: 21vh;
-  left: 10vw;
+  left: 12vw;
   top: 38vh;
   color: #fff;
 
@@ -216,6 +205,18 @@ main .social-bar .social-bar-elements ul li a .social-icon:hover
   }
 }
 
+.animateOnStartUpIn {
+  animation: fadeOnLoadIn 500ms ease 4s 1 normal forwards;
+}
+
+@keyframes fadeOnLoadIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 main .title-text{
   position: absolute;
