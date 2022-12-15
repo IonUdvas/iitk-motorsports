@@ -7,7 +7,20 @@ body {
     background-color: black;
 }
 
-main .logo img{
+#main {
+  background-image: url(../assets/index-background.jpg);
+  background-position: center 0%;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  z-index: 3;
+  transition: transform 500ms cubic-bezier(.13,.53,.38,.97);
+  opacity: 0;
+}
+
+
+#main .logo img{
   position: absolute;
   left: 4vw;
   top: 4vh;
@@ -15,12 +28,12 @@ main .logo img{
   width: auto;
 }
 
-main .social-bar .social-bar-wrapper{
+#main .social-bar .social-bar-wrapper{
   position: absolute;
-  width: 330px;
+  width: 400px;
   height: 70px;
   top: 4vh;
-  left: 75vw;
+  left: 69vw;
   background: #fff;
   opacity: 0.1;
   display: flex;
@@ -29,12 +42,12 @@ main .social-bar .social-bar-wrapper{
   border-radius: 35px;
 }
 
-main .social-bar .social-bar-elements{
+#main .social-bar .social-bar-elements{
   position: absolute;
-  width: 280px;
+  width: 350px;
   height: 70px;
   top: 4vh;
-  left: 75vw;
+  left: 69vw;
   background: transparent;
   display: flex;
   justify-content: center;
@@ -42,12 +55,12 @@ main .social-bar .social-bar-elements{
   border-radius: 35px;
 }
 
-main .social-bar .social-bar-elements ul{
+#main .social-bar .social-bar-elements ul{
   display: flex;
-  width: 280px;
+  width: 350px;
 }
 
-main .social-bar .social-bar-elements ul li{
+#main .social-bar .social-bar-elements ul li{
   position: relative;
   list-style: none;
   width: 70px;
@@ -55,7 +68,7 @@ main .social-bar .social-bar-elements ul li{
   z-index: 2;
 }
 
-main .social-bar .social-bar-elements ul li a
+#main .social-bar .social-bar-elements ul li a
 {
   position: relative;
   display: flex;
@@ -67,7 +80,7 @@ main .social-bar .social-bar-elements ul li a
   font-weight: 500;
 }
 
-main .social-bar .social-bar-elements ul li a .social-icon
+#main .social-bar .social-bar-elements ul li a .social-icon
 {
   position: relative;
   display: block;
@@ -78,7 +91,7 @@ main .social-bar .social-bar-elements ul li a .social-icon
   color: #fff;
 }
 
-main .social-bar .social-bar-elements ul li a .social-icon:hover
+#main .social-bar .social-bar-elements ul li a .social-icon:hover
 {
   color: #000;
 }
@@ -217,7 +230,7 @@ main .social-bar .social-bar-elements ul li a .social-icon:hover
   }
 }
 
-main .title-text{
+#main .title-text{
   position: absolute;
   left: 55vw;
   top: 27vh;
@@ -228,10 +241,10 @@ main .title-text{
   color: #fff;
 }
 
-main .title-text .header-1{
+#main .title-text .header-1{
   font-size: 2.6em;
 }
-main .title-text .header-1 h1{
+#main .title-text .header-1 h1{
   margin: 0%;
   margin-top: 2%;
   background-clip: text;
@@ -240,7 +253,7 @@ main .title-text .header-1 h1{
   color: transparent;
 }
 
-main .title-text .header-2{
+#main .title-text .header-2{
   font-size: 1.5em;
   margin-bottom: 5%;
   color: white;

@@ -1,0 +1,80 @@
+:root{
+    --black: #212529;
+    --red: #ff4d4d;
+}
+
+#sponsors{
+    background-image: radial-gradient(black 65%, var(--red) 205% );
+    background-position: center 0%;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    z-index: 3;
+    transition: transform 500ms cubic-bezier(.13,.53,.38,.97);
+    opacity: 0;
+}
+
+.sponsor-header{
+    color: white;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sponsor-header > .sponsor-header-text{
+    font-size: 4rem;
+    text-transform: uppercase;
+    width: 20vw;
+    padding-left: 5vw;
+}
+
+.sponsor-header > .sponsor-about{
+    text-align: justify;
+    height: fit-content;
+    width: 60vw;
+
+    --b: 3px;   /* border thickness */
+    --s: .45em; /* size of the corner */
+    --color: #fff;
+    
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+  
+    border: 0;
+  
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+  
+.sponsor-about:hover,
+.sponsor-about:focus-visible{
+--_p: 0px;
+outline-color: var(--color);
+outline-offset: .05em;
+}
+
+.sponsor-about:active {
+background: var(--color);
+color: #fff;
+}
+
+.sponsor-content{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
