@@ -76,7 +76,6 @@ main .social-bar .social-bar-elements ul li a .social-icon
   text-align: center;
   transition: 0.5s;
   color: #fff;
-  transition: 0.2s;
 }
 
 main .social-bar .social-bar-elements ul li a .social-icon:hover
@@ -247,3 +246,28 @@ main .title-text .header-2{
   color: white;
 }
 
+.contact-info{
+  font-weight: bold;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  position: absolute;
+  bottom: 5vh;
+  left: 70vw;
+  width: fit-content;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.contact-info:hover{
+  transform: translateY(-5px);
+}
+
+.contact-info:hover > a{
+  color: wheat;
+}
+
+.contact-info > a{
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
+}
