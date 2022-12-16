@@ -95,7 +95,7 @@ color: #fff;
 }
 
 .sponsor-perks{
-    width: 90vw;
+    width: 25vw;
 }
 
 .brackets{
@@ -117,32 +117,39 @@ to {
 }
 
 .pseudoBody {
-animation: background-pan 10s linear infinite;
-background: linear-gradient(
-    to right,
-    var(--g1),
-    var(--g2),
-    var(--g1)
-);
-background-size: 200%;
-height: 60vh;
-overflow: hidden;
-margin: 0px;
+    animation: background-pan 10s linear infinite;
+    background: linear-gradient(
+        to right,
+        rgb(15,15,15),
+        rgb(15,15,15),
+        rgb(15,15,15)
+    );
+    background-size: 200%;
+    height: 60vh;
+    overflow: hidden;
+    margin: 0px;
 }
 
 .pseudoBody.toggled {
-animation: none;
+    animation: background-pan 10s linear infinite;
+    background: linear-gradient(
+        to right,
+        red,
+        rgb(15,15,15),
+        red
+    );
+    background-size: 200%;
 }
 
-.pseudoBody.toggled > #title {
+.pseudoBody.toggled > .content-1 {
 opacity: 0;
 }
 
-.pseudoBody.toggled > #icon {
+.pseudoBody.toggled > .content-2 {
 opacity: 1;
 }
 
-.pseudoBody.toggled > #tiles > .tile:hover {
+.pseudoBody.toggled > .tiles > .tile:hover {
 opacity: 0.1 !important;
 }
 
@@ -153,9 +160,9 @@ top: 50%;
 transform: translate(-50%, -50%);
 }
 
-#tiles {
+.tiles {
 height: calc(60vh - 1px);
-width: calc(90vw - 1px);
+width: calc(var(--width) - 1px);
 position: relative;
 z-index: 2;
 
@@ -174,35 +181,32 @@ background-color: rgb(30, 30, 30);
 }
 
 .tile:before {
-background-color: rgb(15, 15, 15);
+background-color: rgb(15,15,15);
 content: "";
 inset: 0.5px;
 position: absolute;
 }
 
-#title {
+.content-1 {
 color: white;
 font-family: "Rubik", sans-serif;
 font-size: 6vw;
 margin: 0px;
 pointer-events: none;
 transition: opacity 1200ms ease;
-width: 50vw;
+width: 25vw;
 z-index: 3;
+position: absolute;
+top: 0;
 }
 
-#title > .fancy {
-color: var(--g2);
-font-family: 'Dancing Script', cursive;
-font-size: 1.5em;
-line-height: 0.9em;
-}
-
-#icon {
-color: rgba(255, 255, 255, 0.15);
-font-size: 80vmin;
+.content-2 {
+color: rgba(255, 255, 255);
+font-size: 6vw;
 opacity: 0;
 pointer-events: none;
 transition: opacity 1200ms ease;
 z-index: 1;
+position: absolute;
+top: 0;
 }

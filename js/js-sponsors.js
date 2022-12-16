@@ -1,61 +1,66 @@
-const wrapper = document.getElementById("tiles");
-const pseudoBody = document.getElementById("pseudoBody");
+const wrappers = document.getElementsByClassName("tiles");
+const pseudoBodies = document.getElementsByClassName("pseudoBody");
 
 let columns = 0,
     rows = 0,
-    toggled = false;
+    toggled = [false,false,false];
 
-const toggle = () => {
-  toggled = !toggled;
-  
-  pseudoBody.classList.toggle("toggled");
+const toggle = i => {
+  toggled[i] = !toggled[i];
+
+  pseudoBodies[i].classList.toggle("toggled");
 }
 
-const handleOnClick = index => {
-  toggle();
+const handleOnClick = (column, row, index,i) => {
+  toggle(i);
   
   anime({
-    targets: ".tile",
-    opacity: toggled ? 0 : 1,
+    targets: (".tile-" + i),
+    opacity: toggled[i] ? 0 : 1,
     delay: anime.stagger(50, {
-      grid: [columns, rows],
+      grid: [column, row],
       from: index
     })
   });
 }
 
-const createTile = index => {
+const createTile = (columns, rows, index,i) => {
   const tile = document.createElement("div");
-  
   tile.classList.add("tile");
+  tile.classList.add("tile-" + i);
   
-  tile.style.opacity = toggled ? 0 : 1;
+  tile.style.opacity = toggled[i] ? 0 : 1;
   
-  tile.onclick = e => handleOnClick(index);
+  tile.onclick = e => handleOnClick(columns, rows, index,i);
   
   return tile;
 }
 
-const createTiles = quantity => {
+const createTiles = (columns, rows, quantity,i) => {
+  index = 0;
   Array.from(Array(quantity)).map((tile, index) => {
-    wrapper.appendChild(createTile(index));
+    wrappers[i].appendChild(createTile(columns, rows, index,i));
   });
 }
 
-const createGrid = () => {
-  wrapper.innerHTML = "";
+const createGrid = i => {
+  wrappers[i].innerHTML = "";
   
-  const size = pseudoBody.clientWidth > 800 ? 100 : 50;
+  const size = 50;
   
-  columns = Math.floor(pseudoBody.clientWidth / size);
-  rows = Math.floor(pseudoBody.clientHeight / size);
+  columns = Math.floor(pseudoBodies[i].clientWidth / size);
+  rows = Math.floor(pseudoBodies[i].clientHeight / size);
   
-  wrapper.style.setProperty("--columns", columns);
-  wrapper.style.setProperty("--rows", rows);
+  wrappers[i].style.setProperty("--columns", columns);
+  wrappers[i].style.setProperty("--rows", rows);
+  wrappers[i].style.setProperty("--width",  pseudoBodies[i].clientWidth);
   
-  createTiles(columns * rows);
+  createTiles(columns, rows, columns * rows,i);
 }
 
-createGrid();
+for(let i = 0; i < 3; i++){
+  createGrid(i);
+}
 
-window.onresize = () => createGrid();
+
+window.onresize = () => createGrid(0);
