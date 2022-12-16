@@ -102,6 +102,26 @@ color: #fff;
     width: 40vw;
 }
 
+.brackets>table,th,td{
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+.brackets>th,td{
+    padding: 1rem;
+    overflow-wrap: normal;
+}
+
+.brackets>td{
+    text-align: center;
+}
+.brackets>table{
+    left: 5%;
+    position: relative;
+    width: 90%;
+    margin-top: 3%;
+}
+
 .sponsor-info{
     width: 25vw;
 }
@@ -134,9 +154,9 @@ to {
     animation: background-pan 10s linear infinite;
     background: linear-gradient(
         to right,
-        red,
+        rgb(175,15,15),
         rgb(15,15,15),
-        red
+        rgb(175,15,15)
     );
     background-size: 200%;
 }
@@ -190,11 +210,10 @@ position: absolute;
 .content-1 {
 color: white;
 font-family: "Rubik", sans-serif;
-font-size: 6vw;
+font-size: 1rem;
 margin: 0px;
 pointer-events: none;
 transition: opacity 1200ms ease;
-width: 25vw;
 z-index: 3;
 position: absolute;
 top: 0;
@@ -202,11 +221,99 @@ top: 0;
 
 .content-2 {
 color: rgba(255, 255, 255);
-font-size: 6vw;
+font-size: 1rem;
 opacity: 0;
+margin: 0px;
 pointer-events: none;
 transition: opacity 1200ms ease;
 z-index: 1;
 position: absolute;
 top: 0;
+}
+
+.brochure{
+    font-weight: bold;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    bottom: 10vh;
+    left: 7vw;
+    width: 30vw;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  
+.brochure:hover{
+transform: translateY(-5px);
+}
+
+.brochure:hover > a{
+color: wheat;
+}
+
+.brochure > a{
+color: white;
+text-decoration: none;
+transition: 0.5s;
+}
+
+.content-title{
+    font-size: 1.6rem;
+    padding-top: 2%;
+    position: relative;
+    width: 100%;
+    height: 8%;
+    text-align: center;
+}
+
+.content{
+    position: relative;
+    top: 0;
+    font-size: 1rem;
+    width: 95%;
+    height: 90%;
+    text-align: justify;
+}
+
+.content > ul > li > span{
+    font-weight: bold;
+}
+
+.sponsor-info>.types{
+    position: relative;
+    text-align: center;
+    width: 25vw;
+    margin-top: 3%;
+}
+
+.sponsor-info>.top{
+    margin-top: 6%;
+}
+
+.current-sponsors{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.current-sponsors>img{
+    max-height: 10vw;
+    width: 10vw;
+    position: relative;
+}
+
+.past-sponsor{
+    top: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.past-sponsor>img{
+    max-height: 10vw;
+    width: 10vw;
 }
