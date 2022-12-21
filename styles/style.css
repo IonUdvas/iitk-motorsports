@@ -213,3 +213,10 @@ body[data-nav="true"] > #nav-toggle > .close {
   transform: translate(-50%, -50%) scale(1);
 }
 
+main{
+  display: none;
+}
+
+.active{
+  display: block;
+}
