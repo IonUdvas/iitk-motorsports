@@ -221,6 +221,19 @@ body {
   animation: fadeOnLoadIn 500ms ease 4s 1 normal forwards;
 }
 
+.animateOnNavedIn {
+  animation: fadeOnLoadIn 100ms ease 0s 1 normal forwards, transformOnLoadIn 500ms ease 0s 1 normal;
+}
+
+@keyframes transformOnLoadIn {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
 @keyframes fadeOnLoadIn {
   from {
     opacity: 0;

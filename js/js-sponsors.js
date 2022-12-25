@@ -1,6 +1,8 @@
 const wrappers = document.getElementsByClassName("tiles");
 const pseudoBodies = document.getElementsByClassName("pseudoBody");
 
+console.log(pseudoBodies);
+
 let columns = 0,
     rows = 0,
     toggled = [false,false,false];
@@ -53,14 +55,22 @@ const createGrid = i => {
   
   wrappers[i].style.setProperty("--columns", columns);
   wrappers[i].style.setProperty("--rows", rows);
-  wrappers[i].style.setProperty("--width",  pseudoBodies[i].clientWidth);
+  wrappers[i].style.setProperty("--width", pseudoBodies[i].clientWidth);
   
   createTiles(columns, rows, columns * rows,i);
 }
 
-for(let i = 0; i < 3; i++){
-  createGrid(i);
+const createGrids = () => {
+  for(let i = 0; i < 3; i++){
+    createGrid(i);
+  }
+}
+
+const creation = () => {
+  setTimeout(function() {
+    createGrids();
+  }, 600);
 }
 
 
-window.onresize = () => createGrid(0);
+window.onresize = () => createGrids();

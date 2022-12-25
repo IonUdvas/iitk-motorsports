@@ -215,6 +215,7 @@ body[data-nav="true"] > #nav-toggle > .close {
 
 main{
   display: none;
+  overflow: hidden;
 }
 
 .active{
