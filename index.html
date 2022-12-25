@@ -19,19 +19,19 @@
     </div>
   </div>
   <main id="main" name="main" class="animateOnStartUpIn active">
-    <div class="contact-info">
+    <div class="contact-info interactable" data-type="link">
       Drop us a mail at <a href="mailto:iitkms@iitk.ac.in">iitkms@iitk.ac.in</a>
     </div>
-      <div class="logo"><img src="https://www.iitk.ac.in/ame/sae/assets/favicon.png" alt=""></div>
+      <div class="logo interactable" data-type="link"><a href="#"><img src="https://www.iitk.ac.in/ame/sae/assets/favicon.png" alt=""></a></div>
       <div class="social-bar">
         <div class="social-bar-wrapper"></div>
         <div class="social-bar-elements">
           <ul>
-            <li><a href="insta-link"><div class="social-icon"><i class="fa-brands fa-instagram"></i></div></a></li>
-            <li><a href="facebook-link"><div class="social-icon"><i class="fa-brands fa-facebook"></i></div></a></li>
-            <li><a href="linked-in-link"><div class="social-icon"><i class="fa-brands fa-linkedin-in"></i></div></a></li>
-            <li><a href="discord-link"><div class="social-icon"><i class="fa-brands fa-discord"></i></div></a></li>
-            <li><a href="mail-link"><div class="social-icon"><i class="fa-regular fa-envelope"></i></div></a></li>
+            <li class="interactable" data-type="link"><a href="insta-link"><div class="social-icon"><i class="fa-brands fa-instagram"></i></div></a></li>
+            <li class="interactable" data-type="link"><a href="facebook-link"><div class="social-icon"><i class="fa-brands fa-facebook"></i></div></a></li>
+            <li class="interactable" data-type="link"><a href="linked-in-link"><div class="social-icon"><i class="fa-brands fa-linkedin-in"></i></div></a></li>
+            <li class="interactable" data-type="link"><a href="discord-link"><div class="social-icon"><i class="fa-brands fa-discord"></i></div></a></li>
+            <li class="interactable" data-type="button"><a href="mail-link"><div class="social-icon"><i class="fa-regular fa-envelope"></i></div></a></li>
           </ul>
         </div>
       </div>
@@ -46,7 +46,7 @@
       </div>
 
       <div class="about-us">
-        <button class = "toggle-about button-89" id="toggle-button-about">ABOUT US</button>
+        <button class = "toggle-about button-89 interactable" data-type="button" id="toggle-button-about">ABOUT US</button>
         <div id = "content-about" class="about-info is-hidden">
           <div class="about-info-wrapper"></div>
           <div class="about-info-text animateOut">
@@ -57,7 +57,7 @@
   </main>
   
   <main id="sponsors" name = "main" class="animateOnStartUpIn">
-    <div class="contact-info">
+    <div class="contact-info interactable" data-type="link">
       Get in touch with the team at  <a href="mailto:pr.iitkms@gmail.com">pr.iitkms@gmail.com</a>
     </div>
     <div class="sponsor-header">
@@ -69,7 +69,7 @@
       </div>
     </div>
     <div class="sponsor-contents">
-      <div class="sponsor-content sponsor-perks pseudoBody">
+      <div class="sponsor-content sponsor-perks pseudoBody interactable" data-type="rotate">
         <div class="tiles"></div>
         <div class="sponsor-perks content-1">
           <div class="content-title oswald-text">Sponsorship Benefits</div>
@@ -97,7 +97,7 @@
           </div>
         </div>
       </div>
-      <div class="sponsor-content brackets pseudoBody">
+      <div class="sponsor-content brackets pseudoBody interactable" data-type="rotate">
         <div class="tiles"></div>
         <div class="brackets content-1 oswald-text">
           <div class="content-title oswald-text">Sponsorship Schemes</div>
@@ -130,7 +130,7 @@
           <div class="content-title oswald-text">Sponsorship Schemes</div>
         </div>
       </div>
-      <div class="sponsor-content sponsor-info pseudoBody">
+      <div class="sponsor-content sponsor-info pseudoBody interactable" data-type="rotate">
         <div class="tiles"></div>
         <div class="sponsor-info content-1 oswald-text">
           <div class="content-title oswald-text">Our Partners</div>
@@ -165,14 +165,14 @@
         
       </div>
     </div>
-    <div class="brochure">
+    <div class="brochure interactable" data-type="link">
       All the content above can be found in the <a target="_blank" href="assets/brochures/latestBrochure.pdf"><br>Team IITK Motorsports Brochure 2022-23</a>
     </div>   
 
   </main>
 
   <main id="team" name = "main" class="animateOnStartUpIn">
-  <div class="contact-info">
+  <div class="contact-info interactable" data-type="link">
     Contact the Team Captain Suyash <br>at:  <a href="#">+91 70019 29373</a>
   </div>
   <div class="team-header">
@@ -185,27 +185,27 @@
   </div>
   <div class="team-content oswald-text">
     <div class="team-year-nav" id="team-year-nav">
-      <div class="card">
+      <div class="card interactable" data-type="button">
         <div class="card-content">
         <h3>Team 18</h3> 
         </div>
       </div>
-      <div class="card">
+      <div class="card interactable" data-type="button">
         <div class="card-content">
         <h3>Team 18</h3> 
         </div>
       </div>
-      <div class="card">
+      <div class="card interactable" data-type="button">
         <div class="card-content">
         <h3>Team 18</h3> 
         </div>
       </div>
-      <div class="card">
+      <div class="card interactable" data-type="button">
         <div class="card-content">
         <h3>Team 18</h3> 
         </div>
       </div>
-      <div class="card">
+      <div class="card interactable" data-type="button">
         <div class="card-content">
         <h3>Team 18</h3> 
         </div>
@@ -220,33 +220,37 @@
   <div id="nav-links">
     <a class="nav-link">
       <img class="nav-link-image" src="assets/nav-images/home-nav.jpg" />
-      <div class="nav-link-text oswald-text"  data-id="main">HOME</div>
+      <div class="nav-link-text oswald-text interactable" data-type="button" data-id="main">HOME</div>
     </a>
     <a class="nav-link" >
       <img class="nav-link-image" src="assets/nav-images/car-nav.jpg" />
-      <div class="nav-link-text oswald-text" data-id="main">CARS</div>
+      <div class="nav-link-text oswald-text interactable" data-type="button" data-id="main">CARS</div>
     </a>
     <a class="nav-link" >
       <img class="nav-link-image" src="assets/nav-images/event-nav.jpg" />
-      <div class="nav-link-text oswald-text" data-id="main">EVENTS</div>
+      <div class="nav-link-text oswald-text interactable" data-type="button" data-id="main">EVENTS</div>
     </a>
     <a class="nav-link">
       <img class="nav-link-image" src="assets/nav-images/sponsor-nav.jpg" />
-      <div class="nav-link-text oswald-text" data-id="sponsors" onclick="creation">SPONSORS</div>
+      <div class="nav-link-text oswald-text interactable" data-type="button" data-id="sponsors" onclick="creation()">SPONSORS</div>
     </a>
     <a class="nav-link" >
       <img class="nav-link-image" src="assets/nav-images/team-nav.jpg" />
-      <div class="nav-link-text oswald-text" data-id="team">THE TEAM</div>
+      <div class="nav-link-text oswald-text interactable" data-type="button" data-id="team">THE TEAM</div>
     </a>
 
   </div>
   </nav>
 
-<button id="nav-toggle" type="button" onclick="toggleNav()" class="animateOnStartUpIn">
+<button id="nav-toggle" type="button" onclick="toggleNav()" class="animateOnStartUpIn interactable" data-type="button">
     <span>MENU</span>
     <i class="open fa-solid fa-bars-staggered"></i>
     <i class="close fa-solid fa-xmark"></i>
 </button>
+
+<div id="trailer">
+  <i id="trailer-icon" class="fa-solid fa-up-right-from-square"></i>
+</div>
 
 </body>
 <script src="js/anime.min.js"></script>

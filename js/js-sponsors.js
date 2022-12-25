@@ -66,10 +66,11 @@ const createGrids = () => {
   }
 }
 
-const creation = () => {
+function creation() {
   setTimeout(function() {
     createGrids();
   }, 600);
+  console.log("Click");
 }
 
 
