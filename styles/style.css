@@ -227,10 +227,10 @@ body:hover > #trailer {
 }
 
 #trailer {
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 15px;
   
   position: fixed;
   left: 0px;
