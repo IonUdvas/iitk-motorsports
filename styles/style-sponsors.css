@@ -241,7 +241,7 @@ top: 0;
     width: 30vw;
     text-decoration: none;
     transition: 0.5s;
-  }
+}
   
 .brochure:hover{
 transform: translateY(-5px);

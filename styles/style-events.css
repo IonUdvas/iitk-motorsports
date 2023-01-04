@@ -1,0 +1,97 @@
+#events{
+    background-image: url(../assets/team-background.jpg);
+    background-position: center 0%;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    z-index: 3;
+    transition: transform 500ms cubic-bezier(.13,.53,.38,.97);
+    opacity: 0;
+}
+
+.events-header{
+    color: white;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.events-header > .events-header-text{
+    font-size: 4rem;
+    text-transform: uppercase;
+    width: 10rem;
+    left: 3vw;
+    position: relative;
+}
+
+.events-header > .events-about{
+    text-align: justify;
+    height: fit-content;
+    width: 60vw;
+
+    --b: 3px;   /* border thickness */
+    --s: .45em; /* size of the corner */
+    --color: #fff;
+    
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+  
+    border: 0;
+  
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+  
+.events-about:hover,
+.events-about:focus-visible{
+--_p: 0px;
+outline-color: var(--color);
+outline-offset: .05em;
+}
+
+.events-about:active {
+background: var(--color);
+color: #fff;
+}
+
+.central-content{
+    display: flex;
+    flex-direction: row;
+}
+
+.events-contents{
+    position: relative;
+    top:0;
+    left:0;
+    display: flex;
+    height: 65vh;
+    width: 75%;
+    flex-direction: row;
+    background-color: rgba(25,25,25, 0.8);
+}
+
+.bulletin{
+    position: relative;
+    top:0;
+    left:0;
+    display: flex;
+    height: 65vh;
+    width: 25%;
+    flex-direction: row;
+    background-color: rgba(35,35,35, 0.8);
+}

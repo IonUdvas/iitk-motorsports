@@ -43,7 +43,7 @@ const animateTrailer = (e, interacting) => {
   }
   
   trailer.animate(keyframes, { 
-    duration: 0, 
+    duration: 100, 
     fill: "forwards" 
   });
 }

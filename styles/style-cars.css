@@ -1,13 +1,4 @@
-:root{
-    --black: #212529;
-    --red: #ff4d4d;
-    --g1: rgb(98, 0, 234);
-    --g2: rgb(236, 64, 122);
-    --bg-color: rgb(20, 20, 20);
-    --card-color: rgb(23, 23, 23);
-}
-
-#team{
+#cars{
     background-image: url(../assets/team-background.jpg);
     background-position: center 0%;
     background-size: cover;
@@ -19,7 +10,7 @@
     opacity: 0;
 }
 
-.team-header{
+.cars-header{
     color: white;
     top: 0;
     left: 0;
@@ -31,15 +22,15 @@
     align-items: center;
 }
 
-.team-header > .team-header-text{
+.cars-header > .cars-header-text{
     font-size: 4rem;
     text-transform: uppercase;
-    width: 30rem;
+    width: 10rem;
     left: 3vw;
     position: relative;
 }
 
-.team-header > .team-about{
+.cars-header > .cars-about{
     text-align: justify;
     height: fit-content;
     width: 60vw;
@@ -66,19 +57,19 @@
     touch-action: manipulation;
 }
   
-.team-about:hover,
-.team-about:focus-visible{
+.cars-about:hover,
+.cars-about:focus-visible{
 --_p: 0px;
 outline-color: var(--color);
 outline-offset: .05em;
 }
 
-.team-about:active {
+.cars-about:active {
 background: var(--color);
 color: #fff;
 }
 
-.team-contents{
+.cars-contents{
     position: relative;
     top:0;
     left:0;
@@ -89,13 +80,14 @@ color: #fff;
     flex-direction: row;
 }
 
-.team-contents > .team-year-nav{
+.cars-contents > .cars-model-nav{
     background-color: var(--bg-color);
     height: 100%;
     width: 20%;
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    row-gap: 18px;
+    column-gap: 15px;
     position: relative;
     top: 0;
     left: 0;
@@ -105,28 +97,28 @@ color: #fff;
     padding-right: 10px;
 }
 
-.team-contents > .team-year-nav:hover > .card::after{
+.cars-contents > .cars-model-nav:hover > .car::after{
     opacity: 1;
 }
 
-.card {
+.car {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     cursor: pointer;
     display: flex;
-    height: 27%;
+    height: 15%;
     flex-direction: column;
     position: relative;
     align-items: center;
     justify-content: center;
 }
 
-.card:hover::before {
+.car:hover::before {
     opacity: 1;
 }
   
-.card::before,
-.card::after {
+.car::before,
+.car::after {
 border-radius: inherit;
 content: "";
 height: 100%;
@@ -138,7 +130,7 @@ transition: opacity 500ms;
 width: 100%;
 }
 
-.card::before {
+.car::before {
 background: radial-gradient(
     800px circle at var(--mouse-x) var(--mouse-y), 
     rgba(255, 255, 255, 0.06),
@@ -147,7 +139,7 @@ background: radial-gradient(
 z-index: 3;
 }
 
-.card::after {  
+.car::after {  
 background: radial-gradient(
     600px circle at var(--mouse-x) var(--mouse-y), 
     rgba(255, 255, 255, 0.4),
@@ -156,37 +148,38 @@ background: radial-gradient(
 z-index: 1;
 }
 
-.team-contents > .team-info{
+.cars-contents > .cars-info{
     background-color: var(--bg-color);
     width: 80%;
     height: 100%;
     position: relative;
 }
 
-.team-contents > .team-info > .team-content{
+.cars-contents > .cars-info > .car-content{
+    position: relative;
     width: 96%;
     height: 95%;
     background-color: rgb(30, 30, 30);
     padding: 0px;
     margin: 0px;
-    top: 2%;
+    top: 2.5%;
     left: 2%;
     border-radius: 20px;
     border: 2px solid aliceblue;
     transition: 0.3s;
 }
 
-.team-contents > .team-info > .team-content:hover{
+.cars-contents > .cars-info > .car-content:hover{
     background-color: rgb(35, 35, 35);
 }
 
-.card > h1, h2, h3, h4, span {
+.car > h1, h2, h3, h4, span {
     color: rgb(240, 240, 240);
     font-weight: 400;
     margin: 0px;
 }
 
-.card > .card-content {
+.car > .card-content {
     background-color: var(--card-color);
     border-radius: inherit;
     display: flex;
@@ -200,9 +193,18 @@ z-index: 1;
     justify-content: center;
 }
 
-.toggle-alum{
+.sponsor-pointer{
+    font-weight: bold;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
     position: absolute;
-    font-family: 'Oswald', sans-serif;
-    left: 10vw;
-    top: 83vh;
+    bottom: 8vh;
+    left: 7vw;
+    width: 30vw;
+    text-decoration: none;
+    transition: 0.5s;
+}
+  
+.sponsor-pointer:hover{
+transform: translateY(-5px);
 }
